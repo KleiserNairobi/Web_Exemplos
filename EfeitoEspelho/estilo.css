@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.cartao {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height: 400px;
+	transform: translate(-50%,-50%);
+	transform-style: preserve-3d;
+	perspective: 600px;
+	transition: 0.5s;
+}	
+
+.cartao .frente {
+	position: absolute;
+  top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	backface-visibility: hidden;
+	transform: rotateX(0deg);
+	transition: 0.5s;	
+}	
+
+.cartao:hover .frente {
+  transform: rotateX(-180deg);
+}
+
+.cartao .verso {
+	position: absolute;
+  top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+	transition: 0.5s;
+}	
+
+.cartao:hover .verso {
+	transform: rotateX(0deg);
+}
+
+.cartao .verso:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.1);
+}
+
+
+.cartao .verso .detalhe {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.cartao .verso .detalhe h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	font-family: 'Kaushan Script', cursive;
+	color: #fff;
+}	
+
+.cartao .verso .detalhe h2 span {
+	font-size: 18px;
+	font-family: sans-serif;
+	color: 	#a7a7a7;
+}
+
+.medias_sociais {
+	padding: 10px 0;
+}
+
+.medias_sociais a {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	background: #262626;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 50%;
+	transition: 0.5s;
+}	
+
+.medias_sociais a .fa {
+	line-height: 36px;
+}	
+
+.medias_sociais a:hover {
+	background: #e91e63;
+}	
+
+
+
+
+
